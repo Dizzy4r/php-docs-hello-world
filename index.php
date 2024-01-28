@@ -8,32 +8,23 @@
 </head>
 <body>
 
-<h1> heiheiheiheiheihei</h1>
+<h1> Overskrift. </h1>
 
 <?php
 
 $con = mysqli_init();
 mysqli_ssl_set($con,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 mysqli_real_connect($con, "tryingagain.mysql.database.azure.com", "dizzy4r93", "gjnfkitemt93-", "db_trying", 3306, MYSQLI_CLIENT_SSL);
+
+echo "inside the first php tag.";
+
 ?>
 
 <?php
-if($con) {
-    echo "Dritbra connection";
-}
-    ?>
-    
-<?php
 
-// mysqli_ssl_set($con,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+echo "hei du";
 
-
-echo "Hello World!";
-
-echo "Hei no er eg e in live server lol";
 ?>
-
-
     
 </body>
 </html>
