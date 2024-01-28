@@ -15,12 +15,7 @@ $con = mysqli_init();
 mysqli_ssl_set($con,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 mysqli_real_connect($conn, "tryingagain.azurewebsites.net/", "dizzy4r93", "gjnfkitemt93-", "db_trying", 3306, MYSQLI_CLIENT_SSL);
 
-if($con) {
-    echo "Connection to database OK";
-}
-else {
-    echo "No DB connection";
-}
+echo "PHP tag.";
 
 ?>
 
