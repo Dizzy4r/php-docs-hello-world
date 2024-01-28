@@ -9,12 +9,6 @@
 <body>
 
 <?php
-echo "very first php tag before h1";
-?>
-
-<h1> Overskrift. </h1>
-
-<?php
 
 $con = mysqli_init();
 mysqli_ssl_set($con,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
@@ -29,7 +23,7 @@ else {
 
 ?>
 
-
+<h1> Overskrift. </h1>
 
 </body>
 </html>
