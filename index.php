@@ -7,6 +7,7 @@
     <title>Welcome to Trying-again</title>
 </head>
 <body>
+    <h1> Pre php tag </h1>
 
 <?php
 
