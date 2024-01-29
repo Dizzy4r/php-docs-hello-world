@@ -11,9 +11,15 @@
 
 <?php
 
-$con = mysqli_init();
-mysqli_ssl_set($con,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+$conn = mysqli_init();
+mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 mysqli_real_connect($conn, "tryingagain.azurewebsites.net/", "dizzy4r93", "gjnfkitemt93-", "db_trying", 3306, MYSQLI_CLIENT_SSL);
+mysqli_close();
+
+if (mysqli_connect_errno())
+{
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
 
 echo "PHP tag.";
 
