@@ -10,7 +10,6 @@
 
 <?php
 
-echo "Im going crazy because php wont let me connect my database";
 
 $con = mysqli_init();
 mysqli_ssl_set($con,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
