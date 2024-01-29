@@ -10,17 +10,16 @@
 
 <?php
 
-$conn = mysqli_init();
-mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
-mysqli_real_connect($conn, "tryingagain.mysql.database.azure.com", "dizzy4r93", "gjnfkitemt93-", "db_trying", 3306);
+$conn = mysqli_connect("tryingagain.mysql.database.azure.com", "dizzy4r93", "gjnfkitemt93-", "db_trying", 3306);
 
-if (mysqli_connect_errno())
-{
-    die('Failed to connect to MySQL: '.mysqli_connect_error());
+if(!$conn) {
+    exit('Could not connect to server.');
+    echo 'Ingen server';
 }
 else {
-    "nice db is online";
+    echo "nice databse";
 }
+
 
 $query = "SELECT * FROM user";
 $result = mysqli_query($conn, $query);
