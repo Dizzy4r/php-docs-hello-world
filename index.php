@@ -10,16 +10,7 @@
 
 <?php
 
-$conn = mysqli_connect("tryingagain.mysql.database.azure.com", "dizzy4r93", "gjnfkitemt93-", "db_trying", 3306);
-
-if(!$conn) {
-    exit('Could not connect to server.');
-    echo 'Ingen server';
-}
-else {
-    echo "nice databse";
-}
-
+echo "Im going crazy because php wont let me connect my database";
 
 $query = "SELECT * FROM user";
 $result = mysqli_query($conn, $query);
