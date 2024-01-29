@@ -7,27 +7,24 @@
     <title>Welcome to Trying-again</title>
 </head>
 <body>
-    <h1> Pre php tag </h1>
 
 <?php
 
 $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 mysqli_real_connect($conn, "tryingagain.mysql.database.azure.com", "dizzy4r93", "gjnfkitemt93-", "db_trying", 3306, MYSQLI_CLIENT_SSL);
+mysqli_close();
 
-if (mysqli_connect_errno())
-{
-    die('Failed to connect to MySQL: '.mysqli_connect_error());
-    echo "nicht gut";
+
+
+$query = "SELECT * FROM user";
+$result = mysqli_query($conn, $query);
+while ($row = $result->fetch_assoc()) {
+    echo $row['fld_name'];
+    echo "<br>";
 }
-else {
-    echo "<h1>Connection established.</h1>";
-        }
 
-?>
 
-<?php
-echo "HEI!!!";
 ?>
 
 </body>
