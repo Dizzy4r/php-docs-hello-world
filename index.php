@@ -23,7 +23,7 @@ else {
     "nice db is online";
 }
 
-$query = "SELECT * FROM user";
+$query = "SELECT * FROM userr";
 $result = mysqli_query($conn, $query);
 while ($row = $result->fetch_assoc()) {
     echo $row['fld_name'];
