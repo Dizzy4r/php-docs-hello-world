@@ -9,7 +9,8 @@ header {
 }
 
 nav {
-    position: absolute;
+    position: sticky;
+    top: 0vh;
     margin-top: 5vh;
     padding-top: 2vh;
     height: 5vh;
