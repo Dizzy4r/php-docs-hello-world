@@ -10,10 +10,6 @@
 
 <?php
 
-echo "Thiss222sss be the first PHP echo<br>";
-echo "This will be the seoncd";
-
-
 $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 mysqli_real_connect($conn, "tryingagain.mysql.database.azure.com", "dizzy4r93", "gjnfkitemt93-", "db_trying", 3306,  NULL, MYSQLI_CLIENT_SSL);
@@ -25,6 +21,9 @@ if (mysqli_connect_errno())
 else {
     "nice db is online";
 }
+
+echo "e be the first PHP echo<br>";
+echo "This will be the seoncd";
 
 $query = "SELECT * FROM userr";
 $result = mysqli_query($conn, $query);
