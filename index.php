@@ -10,7 +10,7 @@
 
 <?php
 
-echo "This will be the first PHP echo<br>";
+echo "Thisssss be the first PHP echo<br>";
 echo "This will be the seoncd";
 
 
@@ -32,7 +32,8 @@ while ($row = $result->fetch_assoc()) {
     echo $row['fld_name'];
     echo "<br>";
 }
-    
+
+mysqli_close($conn);
 
 ?>
 
