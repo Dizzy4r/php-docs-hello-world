@@ -19,5 +19,7 @@
     <div id="log"><a href="#">Log in</a></div>
 </nav>
 
+<div id="cont" style="height:120vh;"></div>
+    
 </body>
 </html>
