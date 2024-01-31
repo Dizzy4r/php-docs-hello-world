@@ -12,7 +12,7 @@
 
 <nav>
     <div id="welcome">Welcome</div>
-    <div id="play"><a href="#">Play</a></div>
+    <div id="play"><a href="play.html">Play</a></div>
     <div id="create"><a href="#">Create post</a></div>
     <div id="contact"><a href="#">Contact</a></div>
     <div id="home"><a href="#">Home</a></div>
