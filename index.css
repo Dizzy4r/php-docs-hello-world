@@ -1,8 +1,59 @@
 body {
- background: red;
-  margin: 0px;
+    margin: 0px;
+    overflow-x: hidden;
 }
 
-h1 {
-  font-size: 10vh;
+header {
+    font-size: 300%;
+    font-family: monospace;
+}
+
+nav {
+    position: absolute;
+    margin-top: 5vh;
+    padding-top: 2vh;
+    height: 5vh;
+    width: 100vw;
+    border: solid 1px black;
+}
+
+#welcome {
+    margin-left: 1vw;
+    position: absolute;
+}
+
+#play {
+    margin-left: 48vw;
+    position: absolute;
+}
+
+#create {
+    position: absolute;
+    margin-left: 58vw;
+}
+
+#contact {
+    position: absolute;
+    margin-left: 70vw;
+}
+
+#home {
+    position: absolute;
+    margin-left: 80vw;
+}
+
+#log {
+    margin-left: 90vw;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: font-size 200ms ease-out, font-family 1s, margin-left 200ms ease-out;
+}
+
+a:hover {
+    font-size: 140%;
+    font-family: monospace;
+    margin-left:  -0.4vw;
 }
