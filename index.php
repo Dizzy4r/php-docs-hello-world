@@ -20,6 +20,7 @@ if (mysqli_connect_errno())
 }
     
 ?>
+
     
 <header>tryingAgain.</header>
 
@@ -32,7 +33,16 @@ if (mysqli_connect_errno())
     <div id="log"><a href="#">Log in</a></div>
 </nav>
 
-<div id="cont" style="height:120vh;"></div>
+<div id="cont" style="height:120vh;">
+    
+<?php
+$query = "SELECT * FROM userr";
+$result = mysqli_query($conn, $query);
+while ($row = $result->fetch_assoc()) {
+    echo $row['fld_name'];
+    echo "<br>";
+?>
+</div>
     
 </body>
 </html>
