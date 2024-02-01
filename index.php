@@ -12,17 +12,6 @@ include 'header.php';
     <title>tryingAgain</title>
 </head>
 <body>
-    
-<header>tryingAgain.</header>
-
-<nav>
-    <div id="welcome">Welcome</div>
-    <div id="play"><a href="play.html">Play</a></div>
-    <div id="create"><a href="#">Create post</a></div>
-    <div id="contact"><a href="#">Contact</a></div>
-    <div id="home"><a href="#">Home</a></div>
-    <div id="log"><a href="#">Log in</a></div>
-</nav>
 
 <div id="cont" style="height:120vh;">
     
