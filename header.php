@@ -11,7 +11,9 @@
 <header>tryingAgain.</header>
 
 <nav>
-    <div id="welcome">Welcome</div>
+    <div id="welcome">Welcome <?php if(isset($_SESSION['name'])) {
+            echo "You are online as " . $_SESSION['name'];
+        }?> </div>
     <div id="play"><a href="play.html">Play</a></div>
     <div id="create"><a href="#">Create post</a></div>
     <div id="contact"><a href="#">Contact</a></div>
