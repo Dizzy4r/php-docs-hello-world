@@ -47,7 +47,7 @@ if(!isset($_POST['username'], $_POST['password'])) {
     header('Location: login.php');
 }
 
-if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM tbl_user WHERE fld_name = ?')) {
+if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM userr WHERE fld_name = ?')) {
             $name = val($_POST['username']);
             $stmt->bind_param('s', $name);
             $stmt->execute();
