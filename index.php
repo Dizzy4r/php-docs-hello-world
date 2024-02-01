@@ -41,6 +41,7 @@ $result = mysqli_query($conn, $query);
 while ($row = $result->fetch_assoc()) {
     echo $row['fld_name'];
     echo "<br>";
+}
 ?>
 </div>
     
