@@ -15,7 +15,7 @@
     <div id="play"><a href="play.html">Play</a></div>
     <div id="create"><a href="#">Create post</a></div>
     <div id="contact"><a href="#">Contact</a></div>
-    <div id="home"><a href="#">Home</a></div>
+    <div id="home"><a href="index.php">Home</a></div>
     <div id="log"><a href="login.php">Log in</a></div>
 </nav>
     
