@@ -13,16 +13,52 @@ include 'header.php';
 </head>
 <body>
 
-<div id="cont" style="height:120vh;">
-    
-<?php
-$query = "SELECT * FROM userr";
-$result = mysqli_query($conn, $query);
-while ($row = $result->fetch_assoc()) {
-    echo $row['fld_name'];
-    echo "<br>";
+<style>
+    table, th, td {
+    margin-top: 10vh;
+    border: solid 1px black;
+    font-size: 3vh;
 }
+td {
+    background: white;
+}
+th {
+    width: 80vw;
+    background: rgb(223, 249, 223);
+
+}
+table {
+    background: rgb(223, 249, 223);
+    margin-left: 10vw;
+    width: 80vw;
+    height: 50vh auto;
+}
+</style>
+
+<div id="cont" style="height:120vh;">
+
+<?php 
+
+$sql = "SELECT * FROM forumpost ORDER BY postdate DESC"; 
+$result = mysqli_query($conn, $sql);
+
+$x = 0;
+while ($row = $result->fetch_assoc()) {
+    if($x < 3) {
+        $x++;
+    }
+    elseif($x >= 3) {
+        break;
+    }
+    echo " <tr>
+    <td style='width:13vw'>" . $num['postname'] . "</td>
+    <td>" . $num['posttext'] . "<br> <br>" . $num['postdate'] .  "</td>
+    </tr>
+    "; 
+}
+
 ?>
+
 </div>
     
 </body>
