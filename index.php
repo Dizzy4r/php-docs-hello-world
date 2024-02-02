@@ -41,9 +41,10 @@ table {
 
 $sql = "SELECT * FROM forumpost ORDER BY postdate DESC"; 
 $result = mysqli_query($conn, $sql);
+$num = mysqli_num_rows($result);
 
 $x = 0;
-while ($row = $result->fetch_assoc()) {
+while ($num = $result->fetch_assoc()) {
     if($x < 3) {
         $x++;
     }
@@ -51,8 +52,8 @@ while ($row = $result->fetch_assoc()) {
         break;
     }
     echo " <tr>
-    <td style='width:13vw'>" . row['postname'] . "</td>
-    <td>" . $row['posttext'] . "<br> <br>" . $row['postdate'] .  "</td>
+    <td style='width:13vw'>" . $num['postname'] . "</td>
+    <td>" . $num['posttext'] . "<br> <br>" . $num['postdate'] .  "</td>
     </tr>
     "; 
 }
