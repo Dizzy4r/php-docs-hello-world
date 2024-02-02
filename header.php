@@ -15,13 +15,22 @@ session_start();
 
 <nav>
     <div id="welcome">Welcome <?php if(isset($_SESSION['name'])) {
-            echo "You are online as " . $_SESSION['name'];
+            echo $_SESSION['name'];
         }?> </div>
     <div id="play"><a href="play.html">Play</a></div>
     <div id="create"><a href="#">Create post</a></div>
     <div id="contact"><a href="#">Contact</a></div>
     <div id="home"><a href="index.php">Home</a></div>
-    <div id="log"><a href="login.php">Log in</a></div>
+    <div id="log">
+        <?php
+if(isset($_SESSION['login'])) {
+    echo "<div id='logout'><a href='logout.php'>Log out</a></div>";
+}
+if(!isset($_SESSION['login'])) {
+    echo "<div id='link3'><a href='login.php'>Log in</a></div>";
+}
+?>
+    </div>
 </nav>
     
 </body>
