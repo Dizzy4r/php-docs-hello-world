@@ -12,14 +12,9 @@ session_start();
 <body>
     
 <?php
-if(isset($_SESSION['login'])) {
     session_destroy();
     session_unset();
     header('Location: index.php');
-}
-else {
-    header('Location: index.php');
-}
 ?>
 
 </body>
