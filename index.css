@@ -50,11 +50,4 @@ nav {
 a {
     text-decoration: none;
     color: black;
-    transition: font-size 200ms ease-out, font-family 1s, margin-left 200ms ease-out;
-}
-
-a:hover {
-    font-size: 140%;
-    font-family: monospace;
-    margin-left:  -0.4vw;
 }
