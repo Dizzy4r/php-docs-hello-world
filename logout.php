@@ -1,6 +1,5 @@
 <?php
-session_unset();
-session_destroy();
+include 'header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
