@@ -51,8 +51,8 @@ while ($row = $result->fetch_assoc()) {
         break;
     }
     echo " <tr>
-    <td style='width:13vw'>" . $num['postname'] . "</td>
-    <td>" . $num['posttext'] . "<br> <br>" . $num['postdate'] .  "</td>
+    <td style='width:13vw'>" . row['postname'] . "</td>
+    <td>" . $row['posttext'] . "<br> <br>" . $row['postdate'] .  "</td>
     </tr>
     "; 
 }
