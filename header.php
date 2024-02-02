@@ -18,7 +18,7 @@ session_start();
             echo $_SESSION['name'];
         }?> </div>
     <div id="play"><a href="play.html">Play</a></div>
-    <div id="create"><a href="#">Create post</a></div>
+    <div id="create"><a href="#">Post</a></div>
     <div id="contact"><a href="#">Contact</a></div>
     <div id="home"><a href="index.php">Home</a></div>
     <div id="log">
