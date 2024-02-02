@@ -24,10 +24,10 @@ session_start();
     <div id="log">
         <?php
 if(isset($_SESSION['name'])) {
-    echo "<div id='logout'><a href='logout.php'>Log out</a></div>";
+    echo "<div id='log'><a href='logout.php'>Log out</a></div>";
 }
 if(!isset($_SESSION['name'])) {
-    echo "<div id='logout'><a href='login.php'>Log in</a></div>";
+    echo "<div id='log'><a href='login.php'>Log in</a></div>";
 }
 ?>
     </div>
