@@ -18,7 +18,7 @@ if(!isset($_SESSION['name'])) {
 }
 ?>
 
-    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);" method="post">
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
     <input type="text" name="userpost" placeholder="Info here">
     <select name="category" required>
         <option value="Computer">Computers</option>
