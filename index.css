@@ -38,6 +38,10 @@ nav {
     margin-left: 70vw;
 }
 
+#loginbtn {
+    position: absolute;
+    margin-left: 70vw;
+
 a {
     text-decoration: none;
     color: black;
