@@ -34,6 +34,7 @@ nav {
 }
 
 #login {
+    position: absolute;
     margin-left: 70vw;
 }
 
