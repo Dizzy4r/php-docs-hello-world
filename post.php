@@ -40,7 +40,7 @@ if(isset($_POST['userpost'])) {
     else {
         $post = htmlspecialchars($_POST['userpost']);
         $postcat = $_POST['category'];
-        $sql = "INSERT INTO forumpost (`postname`, `posttext`, `postcat`) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO forumposts (`postname`, `posttext`, `postcat`) VALUES (?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "sss", $post, $_SESSION['name'], $postcat);
         $result = mysqli_stmt_execute($stmt);
