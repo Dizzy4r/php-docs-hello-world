@@ -17,7 +17,7 @@ session_start();
     <div id="welcome">Welcome <?php if(isset($_SESSION['name'])) {
             echo $_SESSION['name'];
         }?> </div>
-    <div id="create"><a href="#">Post</a></div>
+    <div id="create"><a href="post.php">Post</a></div>
     <div id="home"><a href="index.php">Home</a></div>
         <?php
 if(isset($_SESSION['name'])) {
