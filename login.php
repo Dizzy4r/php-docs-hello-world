@@ -58,11 +58,9 @@ if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM userr WHERE fld_name
                     
                         if($_POST['password'] === $password) {
                             session_regenerate_id();
-                            $_SESSION['loggedin'] = TRUE;
                             $_SESSION['name'] = $_POST['username'];
                             $_SESSION['id'] = $id;
                             $_SESSION['login'] = $name;
-                            echo "Welcome " . $_SESSION["name"];
                             header('Location: index.php');
                         }
                         else {
