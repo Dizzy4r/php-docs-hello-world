@@ -36,7 +36,7 @@ table {
 </style>
 
 <div id="cont" style="height:120vh;">
-
+<table>
 <?php 
 
 $sql = "SELECT * FROM forumpost ORDER BY postdate DESC"; 
@@ -54,11 +54,12 @@ while ($num = $result->fetch_assoc()) {
     echo " <tr>
     <td style='width:13vw'>" . $num['postname'] . "</td>
     <td>" . $num['posttext'] . "<br> <br>" . $num['postdate'] .  "</td>
-    </tr>
+    </tr><br>
     "; 
 }
 
 ?>
+</table>
 
 </div>
     
