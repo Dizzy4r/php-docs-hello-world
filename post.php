@@ -42,7 +42,7 @@ if(isset($_POST['userpost'])) {
         $postcat = $_POST['category'];
         $sql = "INSERT INTO forumposts (`postname`, `posttext`, `postcat`) VALUES (?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
-        mysqli_stmt_bind_param($stmt, "sss", $post, $_SESSION['name'], $postcat);
+        mysqli_stmt_bind_param($stmt, "sss", $_SESSION['name'], $post, $postcat);
         $result = mysqli_stmt_execute($stmt);
 
         if($result) {
