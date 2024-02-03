@@ -10,24 +10,14 @@ session_start();
 </head>
 <body id="bodd">
 
-<script>
-const bod = document.getElementById("bodd");
-function myScript() {
-    return {
-        </script>
+
         <?php
             session_destroy();
             session_unset();
             header('Location: index.php');
         ?>
-        <script>
-    }
-}
-bod.addEventListener("load", myScript);
 
-</script>
+<a href"index.php"> You have logged out. Press me to go to the main page.</a>
     
-
-
 </body>
 </html>
