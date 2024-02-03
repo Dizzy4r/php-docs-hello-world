@@ -22,7 +22,7 @@ session_start();
     <div id="login">
         <?php
 if(isset($_SESSION['name'])) {
-    echo "<div id="login"><a href='logout.php'>Log out</a></div>";
+    echo "<div id='login'><a href='logout.php'>Log out</a></div>";
 }
 if(!isset($_SESSION['name'])) {
     echo "<a href='login.php'>Log in</a>";
