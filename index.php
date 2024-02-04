@@ -40,7 +40,7 @@ table {
 <table>
 <?php 
 
-$sql = "SELECT * FROM forumposts ORDER BY postdate DESC"; 
+$sql = "SELECT * FROM forumposts"; 
 $result = mysqli_query($conn, $sql);
 $num = mysqli_num_rows($result);
 
