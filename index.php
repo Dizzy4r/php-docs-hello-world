@@ -35,8 +35,7 @@ table {
     height: 50vh auto;
 }
 
-#form1 {
-    background: red;
+#form1 {    
     width: 50vw;
     margin-left: 25vw;
     text-align: center;
