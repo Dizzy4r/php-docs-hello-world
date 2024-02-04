@@ -48,8 +48,8 @@ table {
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
     <p>Choose a category</p>
     <select name="category">
-        <option value="Work">Computer</option>
-        <option value="Computer">Work</option>
+        <option value="Work">Work</option>
+        <option value="Computer">Computer</option>
         <option value="Random">Random</option>
     </select>
     <input type="submit">
