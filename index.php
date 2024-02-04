@@ -40,16 +40,16 @@ table {
 <table>
 <?php 
 
-$sql = "SELECT * FROM forumposts ORDER BY postid ASC"; 
+$sql = "SELECT * FROM forumposts ORDER BY postid DESC"; 
 $result = mysqli_query($conn, $sql);
 $num = mysqli_num_rows($result);
 
 $x = 0;
 while ($num = $result->fetch_assoc()) {
-    if($x < 3) {
+    if($x < 6) {
         $x++;
     }
-    elseif($x >= 3) {
+    elseif($x >= 6) {
         break;
     }
     echo " <tr>
