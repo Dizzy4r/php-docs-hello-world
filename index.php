@@ -34,19 +34,28 @@ table {
     width: 80vw;
     height: 50vh auto;
 }
+
+#form1 {
+    background: red;
+    width: 50vw;
+    margin-left: 25vw;
+    text-align: center;
+}
 </style>
 
 <div id="cont" style="height:120vh;">
-
+<div id="form1">
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+    <p>Choose a category</p>
     <select name="category">
-        <option value="Computer">Computer</option>
+        <option value="Work">Computer</option>
         <option value="Work">Work</option>
         <option value="Random">Random</option>
     </select>
     <input type="submit">
 </form>
-
+</div>
+    
 <?php
 if(isset($_POST['category'])) {
     $cat = $_POST['category'];
