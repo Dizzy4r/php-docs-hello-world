@@ -49,7 +49,7 @@ table {
     <p>Choose a category</p>
     <select name="category">
         <option value="Work">Computer</option>
-        <option value="Work">Work</option>
+        <option value="Computer">Work</option>
         <option value="Random">Random</option>
     </select>
     <input type="submit">
