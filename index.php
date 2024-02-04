@@ -37,30 +37,40 @@ table {
 </style>
 
 <div id="cont" style="height:120vh;">
-<table>
-<?php 
 
-$sql = "SELECT * FROM forumposts ORDER BY postid DESC"; 
-$result = mysqli_query($conn, $sql);
-$num = mysqli_num_rows($result);
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+    <select name="category">
+        <option value="Computer">Computer</option>
+        <option value="Work">Work</option>
+        <option value="Random">Random</option>
+    </select>
+    <input type="submit">
+</form>
 
+<?php
+if(isset($_POST['category'])) {
+    $cat = $_POST['category'];
+    $sql = "SELECT * FROM forumposts WHERE postCat='$cat' ORDER BY postid DESC"; // Trenger visst ikke `` tegnene 
+    $result = mysqli_query($conn, $sql);
+    $num = mysqli_num_rows($result); // Ikke nødvendig?
+echo "<table>";
 $x = 0;
 while ($num = $result->fetch_assoc()) {
-    if($x < 6) {
+    if($x < 3) {
         $x++;
     }
-    elseif($x >= 6) {
+    elseif($x >= 3) {
         break;
     }
     echo " <tr>
     <td style='width:13vw'>" . $num['postname'] . "</td>
     <td>" . $num['posttext'] . "<br> <br>" . $num['postid'] .  "</td>
-    </tr><br>
+    </tr> 
     "; 
 }
-
+echo "</table>";
+}
 ?>
-</table>
 
 </div>
     
