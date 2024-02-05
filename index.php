@@ -44,6 +44,14 @@ table {
 
 <div id="cont" style="height:120vh;">
 
+<div id="ipinfo">
+<?php
+    if(!empty($_SERVER['REMOTE_ADDR'])) {
+        $ip = $_SERVER['REMOTE_ADDR'];
+        echo "Your IP is " . $ip;
+    }
+?>
+</div>
     
 <?php
     $sql = "SELECT * FROM forumposts ORDER BY postid DESC"; // Trenger visst ikke `` tegnene 
