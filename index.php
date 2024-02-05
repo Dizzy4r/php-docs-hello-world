@@ -43,22 +43,10 @@ table {
 </style>
 
 <div id="cont" style="height:120vh;">
-<div id="form1">
-<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
-    <p>Choose a category</p>
-    <select name="category">
-        <option value="Work">Work</option>
-        <option value="Computer">Computer</option>
-        <option value="Random">Random</option>
-    </select>
-    <input type="submit">
-</form>
-</div>
+
     
 <?php
-if(isset($_POST['category'])) {
-    $cat = $_POST['category'];
-    $sql = "SELECT * FROM forumposts WHERE postCat='$cat' ORDER BY postid DESC"; // Trenger visst ikke `` tegnene 
+    $sql = "SELECT * FROM forumposts ORDER BY postid DESC"; // Trenger visst ikke `` tegnene 
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result); // Ikke nødvendig?
 echo "<table>";
@@ -72,7 +60,7 @@ while ($num = $result->fetch_assoc()) {
     }
     echo " <tr>
     <td style='width:13vw'>" . $num['postname'] . "</td>
-    <td>" . $num['posttext'] . "<br> <br>" . $num['postid'] .  "</td>
+    <td>" . $num['posttext'] . "<br> <br><p> Post-id: " . $num['postid'] .  ". Category: " . $num['postcat'] . "</p></td>
     </tr> 
     "; 
 }
