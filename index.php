@@ -51,6 +51,12 @@ table {
         echo "Your IP is " . $ip;
     }
 ?>
+<br>
+<?php
+        if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            echo "Proxy ip = " . $ip;
+        }
 </div>
     
 <?php
