@@ -45,17 +45,11 @@ table {
 <div id="cont" style="height:120vh;">
 
 <div id="ipinfo">
-<?php
-    if(!empty($_SERVER['REMOTE_ADDR'])) {
-        $ip = $_SERVER['REMOTE_ADDR'];
-        echo "Your IP is " . $ip;
-    }
-?>
 <br>
 <?php
         if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
             $ipVPN = $_SERVER['HTTP_X_FORWARDED_FOR'];
-            echo "Proxy ip = " . $ipVPN;
+            echo "Your ip is " . $ipVPN;
         }
 ?>
 </div>
