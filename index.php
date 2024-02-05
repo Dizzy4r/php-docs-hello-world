@@ -65,7 +65,7 @@ while ($num = $result->fetch_assoc()) {
     "; 
 }
 echo "</table>";
-}
+
 ?>
 
 </div>
