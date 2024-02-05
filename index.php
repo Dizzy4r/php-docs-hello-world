@@ -54,8 +54,8 @@ table {
 <br>
 <?php
         if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-            echo "Proxy ip = " . $ip;
+            $ipVPN = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            echo "Proxy ip = " . $ipVPN;
         }
 ?>
 </div>
