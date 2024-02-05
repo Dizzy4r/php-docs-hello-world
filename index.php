@@ -52,10 +52,10 @@ table {
 echo "<table>";
 $x = 0;
 while ($num = $result->fetch_assoc()) {
-    if($x < 3) {
+    if($x < 7) {
         $x++;
     }
-    elseif($x >= 3) {
+    elseif($x >= 7) {
         break;
     }
     echo " <tr>
