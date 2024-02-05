@@ -18,7 +18,7 @@ include 'header.php';
     table, th, td {
     margin-top: 10vh;
     border: solid 1px black;
-    font-size: 1vh;
+    font-size: 2vh;
 }
 td {
     background: white;
