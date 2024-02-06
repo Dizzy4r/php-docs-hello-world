@@ -13,6 +13,23 @@ include 'connect.php';
 </head>
 <body>
 
+<style>
+    #xy {
+        margin-left: 40vw;
+        width: 20vw;
+        height: 30vh;
+        text-align: center;
+    }
+    #nme {
+        width: 20vw;
+        height: 7vh;
+    }
+    #pas {
+        width: 20vw;
+        height: 7vh;
+    }
+</style>
+
 <div id="xy">
 <p id="ppp"> Dont have an account? Create your user <a href="createuser.php"> here </a> </p>
 </div>
