@@ -31,9 +31,8 @@ include 'connect.php';
 </style>
 
 <div id="xy">
-<p id="ppp"> Dont have an account? Create your user <a href="createuser.php"> here </a> </p>
-</div>
-
+<p id="ppp"> Dont have an account? Create your user <a href="#"> here </a> </p>
+    <br>
 <form id="form2" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>">
         <input type="text" name="username" placeholder="username" id="nme">
             <br>
@@ -41,6 +40,9 @@ include 'connect.php';
             <br>
         <input type="submit" name="sub2" value="Login" id="sub2">
 </form>
+</div>
+
+
 
 <p id="pen">
 <?php // LOGIN SECURE PHP
