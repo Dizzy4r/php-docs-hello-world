@@ -83,13 +83,7 @@ if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM userr WHERE fld_name
                            // $_SESSION['login'] = $name;
                             header('Location: index.php');
                         }
-                        else {
-                            echo "Wrong username/password";
-                        }
                     } 
-            else {
-                echo "Wrong username or your password";
-            }
             $stmt->close();
         }
 ?>
