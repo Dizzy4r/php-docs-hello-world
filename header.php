@@ -8,7 +8,7 @@
 </head>
 <body>
     
-<header>tryingAgain.</header>
+<h1>tryingAgain.</h1>
 
 <nav>
     <div id="welcome">Welcome <?php if(isset($_SESSION['name'])) {
