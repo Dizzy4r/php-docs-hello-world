@@ -77,11 +77,11 @@ if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM userr WHERE fld_name
                     $stmt->fetch();
                     
                         if($_POST['password'] === $password) {
-                           // session_regenerate_id();
                             $_SESSION['name'] = $_POST['username'];
+                            header('Location: index.php');                           
+                            // session_regenerate_id();
                            // $_SESSION['id'] = $id;
                            // $_SESSION['login'] = $name;
-                            header('Location: index.php');
                         }
                     } 
             $stmt->close();
