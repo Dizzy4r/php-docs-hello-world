@@ -2,7 +2,6 @@
 session_start();
 include 'loginscript.php';
 include 'connect.php';
-include 'header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,5 +44,8 @@ include 'header.php';
 
 
 
+<?php
+include 'header.php';
+?>
 </body>
 </html>
