@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'header.php';
 include 'connect.php';
 ?>
 <!DOCTYPE html>
@@ -8,7 +7,7 @@ include 'connect.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="loginusers.css">
+    <link rel="stylesheet" href="index.css">
     <title>Log in</title>
 </head>
 <body>
@@ -29,6 +28,25 @@ include 'connect.php';
         height: 7vh;
     }
 </style>
+
+    
+<h1>trYingAgain.</h1>
+
+<nav>
+    <div id="welcome">Welcome <?php if(isset($_SESSION['name'])) {
+            echo $_SESSION['name'];
+        }?> </div>
+    <div id="create"><a href="post.php">Post</a></div>
+    <div id="home"><a href="index.php">Home</a></div>
+        <?php
+if(isset($_SESSION['name'])) {
+    echo "<div id='login'><a href='logout.php'>Log out</a></div>";
+}
+if(!isset($_SESSION['name'])) {
+    echo "<div id='loginbtn'><a href='login.php'>Log in</a></div>";
+}
+?>
+</nav>
 
 <div id="xy">
 <p id="ppp"> Dont have an account? Create your user <a href="#"> here </a> </p>
