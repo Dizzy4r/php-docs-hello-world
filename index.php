@@ -43,16 +43,6 @@ table {
 </style>
 
 <div id="cont" style="height:120vh;">
-
-<div id="ipinfo">
-<br>
-<?php
-        if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $ipVPN = $_SERVER['HTTP_X_FORWARDED_FOR'];
-            echo "Your ip is " . $ipVPN;
-        }
-?>
-</div>
     
 <?php
     $sql = "SELECT * FROM forumposts ORDER BY postid DESC"; // Trenger visst ikke `` tegnene 
@@ -77,6 +67,16 @@ echo "</table>";
 
 ?>
 
+</div>
+
+<div id="ipinfo">
+<br>
+<?php
+        if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ipVPN = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            echo "Your ip is " . $ipVPN;
+        }
+?>
 </div>
     
 </body>
