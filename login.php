@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'header.php';
 include 'connect.php';
 // LOGIN SECURE PHP
 if(isset($_POST['username'], $_POST['password'])) {
@@ -32,8 +33,6 @@ if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM userr WHERE fld_name
                     } 
             $stmt->close();
         }
-
-include 'header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
