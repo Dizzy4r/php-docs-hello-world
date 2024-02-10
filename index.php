@@ -2,6 +2,7 @@
 session_start();
 include 'connect.php';
 include 'header.php';
+include 'SQLcon.php';
 ?>
 
 <!DOCTYPE html>
