@@ -70,6 +70,13 @@ echo "</table>";
 
 </div>
 
+<?php
+$real = 'SELECT name FROM test';
+foreach ($connn->query($real) as $row) {
+    print $row['name'] . "\t";
+}
+?>
+
 <div id="ipinfo">
 <br>
 <?php
