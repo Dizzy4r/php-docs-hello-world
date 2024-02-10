@@ -7,4 +7,7 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
+$connectionInfo = array("UID" => "iAmRobertmor", "pwd" => "lolHax1993", "Database" => "DB_tryingLess", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:tryingless.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
