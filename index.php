@@ -71,9 +71,15 @@ echo "</table>";
 </div>
 
 <?php
+/*
 $real = 'SELECT name FROM test';
 foreach ($connn->query($real) as $row) {
     print $row['name'] . "\t";
+}
+*/
+$result = $connn->query('SELECT name FROM test');
+while ($row = $result->fetch()) {
+  print $row[0];
 }
 ?>
 
