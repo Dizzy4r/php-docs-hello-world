@@ -30,17 +30,6 @@ include 'connect.php';
     }
 </style>
 
-<div id="xy">
-<p id="ppp"> Dont have an account? Create your user <a href="create_user.php"> here </a> </p>
-    <br>
-<form id="form2" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>">
-        <input type="text" name="username" placeholder="username" id="nme">
-            <br>
-        <input type="password" name="password" placeholder="password" id="pas">
-            <br>
-        <input type="submit" name="sub2" value="Login" id="sub2">
-</form>
-</div>
 <?php
     // LOGIN SECURE PHP
 if(isset($_POST['username'], $_POST['password'])) {
@@ -74,6 +63,19 @@ if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM userr WHERE fld_name
             $stmt->close();
         }
 ?>
+
+<div id="xy">
+<p id="ppp"> Dont have an account? Create your user <a href="create_user.php"> here </a> </p>
+    <br>
+<form id="form2" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>">
+        <input type="text" name="username" placeholder="username" id="nme">
+            <br>
+        <input type="password" name="password" placeholder="password" id="pas">
+            <br>
+        <input type="submit" name="sub2" value="Login" id="sub2">
+</form>
+</div>
+
     
 </body>
 </html>
