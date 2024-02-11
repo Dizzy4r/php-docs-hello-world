@@ -40,7 +40,7 @@ if(isset($_POST['username'], $_POST['pass'])) {
         $country = htmlspecialchars($_POST['country']);
         $birthday = htmlspecialchars($_POST['birthday']);
 
-        $sql = "INSERT INTO real_user (`real_name`, `real_password`, `real_mail`, `real_country`, `real_birthday`) VALUES (?, ?, ?, ?, ?);"
+        $sql = "INSERT INTO real_user (`real_name`, `real_password`, `real_mail`, `real_country`, `real_birthday`) VALUES (?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, 'sssss', $username, $password, $mail, $country, $birthday);
         $result = mysqli_stmt_execute($stmt);
