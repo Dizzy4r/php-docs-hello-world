@@ -6,13 +6,12 @@ include 'connect.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Log in</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="index.css">
+<title>Log in</title>
 </head>
 <body>
-
 <style>
     #xy {
         margin-left: 40vw;
@@ -29,6 +28,18 @@ include 'connect.php';
         height: 7vh;
     }
 </style>
+
+<div id="xy">
+<p id="ppp"> Dont have an account? Create your user <a href="create_user.php"> here </a> </p>
+    <br>
+<form id="form2" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>">
+        <input type="text" name="username" placeholder="username" id="nme">
+            <br>
+        <input type="password" name="password" placeholder="password" id="pas">
+            <br>
+        <input type="submit" name="sub2" value="Login" id="sub2">
+</form>
+</div>
 
 <?php
     // LOGIN SECURE PHP
@@ -63,19 +74,6 @@ if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM userr WHERE fld_name
             $stmt->close();
         }
 ?>
-
-<div id="xy">
-<p id="ppp"> Dont have an account? Create your user <a href="create_user.php"> here </a> </p>
-    <br>
-<form id="form2" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>">
-        <input type="text" name="username" placeholder="username" id="nme">
-            <br>
-        <input type="password" name="password" placeholder="password" id="pas">
-            <br>
-        <input type="submit" name="sub2" value="Login" id="sub2">
-</form>
-</div>
-
     
 </body>
 </html>
