@@ -32,6 +32,7 @@ if(isset($_POST['username'], $_POST['pass'])) {
     if(strlen($_POST['username']) < 5 || strlen($_POST['pass'] < 5)) {
         echo "User not created.";
         exit();
+        header('Location: create_user.php');
     }
     elseif(strlen($_POST['username']) >= 5) {
         $username = htmlspecialchars($_POST['username']);
