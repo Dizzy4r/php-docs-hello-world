@@ -2,7 +2,6 @@
 session_start();
 include 'connect.php';
 include 'header.php';
-include 'SQLcon.php';
 ?>
 
 <!DOCTYPE html>
@@ -76,11 +75,12 @@ $real = 'SELECT name FROM test';
 foreach ($connn->query($real) as $row) {
     print $row['name'] . "\t";
 }
-*/
+
 $result = $connn->query('SELECT name FROM test');
 while ($row = $result->fetch()) {
   print $row[0];
 }
+*/
 ?>
 
 <div id="ipinfo">
