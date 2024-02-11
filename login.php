@@ -31,7 +31,7 @@ include 'connect.php';
 </style>
 
 <div id="xy">
-<p id="ppp"> Dont have an account? Create your user <a href="#"> here </a> </p>
+<p id="ppp"> Dont have an account? Create your user <a href="create_user.php"> here </a> </p>
     <br>
 <form id="form2" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>">
         <input type="text" name="username" placeholder="username" id="nme">
