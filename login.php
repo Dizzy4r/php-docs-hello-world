@@ -2,37 +2,6 @@
 session_start();
 include 'header.php';
 include 'connect.php';
-// LOGIN SECURE PHP
-if(isset($_POST['username'], $_POST['password'])) {
-    if(strlen($_POST['username']) < 5 || strlen($_POST['password'] < 5)) {
-        exit();
-        header('Location: login.php');
-    }
-}
-
-if(!isset($_POST['username'], $_POST['password'])) {
-    exit("Please fill both fields.");
-    header('Location: login.php');
-}
-
-if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM userr WHERE fld_name = ?')) {
-            $name = htmlspecialchars($_POST['username']);
-            $stmt->bind_param('s', $name);
-            $stmt->execute();
-            $stmt->store_result();
-                if($stmt->num_rows > 0) {
-                    $stmt->bind_result($id, $password);
-                    $stmt->fetch();
-                        if($_POST['password'] === $password) {
-                            $_SESSION['name'] = $_POST['username'];
-                            header('Location: index.php');                           
-                            // session_regenerate_id();
-                           // $_SESSION['id'] = $id;
-                           // $_SESSION['login'] = $name;
-                        }
-                    } 
-            $stmt->close();
-        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,6 +41,39 @@ if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM userr WHERE fld_name
         <input type="submit" name="sub2" value="Login" id="sub2">
 </form>
 </div>
+<?php
+    // LOGIN SECURE PHP
+if(isset($_POST['username'], $_POST['password'])) {
+    if(strlen($_POST['username']) < 5 || strlen($_POST['password'] < 5)) {
+        exit();
+        header('Location: login.php');
+    }
+}
 
+if(!isset($_POST['username'], $_POST['password'])) {
+    exit("Please fill both fields.");
+    header('Location: login.php');
+}
+
+if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM userr WHERE fld_name = ?')) {
+            $name = htmlspecialchars($_POST['username']);
+            $stmt->bind_param('s', $name);
+            $stmt->execute();
+            $stmt->store_result();
+                if($stmt->num_rows > 0) {
+                    $stmt->bind_result($id, $password);
+                    $stmt->fetch();
+                        if($_POST['password'] === $password) {
+                            $_SESSION['name'] = $_POST['username'];
+                            header('Location: index.php');                           
+                            // session_regenerate_id();
+                           // $_SESSION['id'] = $id;
+                           // $_SESSION['login'] = $name;
+                        }
+                    } 
+            $stmt->close();
+        }
+?>
+    
 </body>
 </html>
