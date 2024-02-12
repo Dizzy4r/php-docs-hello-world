@@ -11,7 +11,15 @@ include 'header.php';
     <title>tryingAgain</title>
 </head>
 <body>
-    
+
+<style>
+   form {
+       border: solid 1px black;
+       width: 50vw;
+       text-align: center;
+   } 
+</style>
+
 <form id="form1" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
         <input type="text" name="username" placeholder="Name">
         <br>
@@ -47,6 +55,7 @@ if(isset($_POST['username'], $_POST['pass'])) {
         $result = mysqli_stmt_execute($stmt);
         if($result) {
                 header('Location: login.php');
+                echo "User created";
             }
             else {
                 echo "User was not created";
