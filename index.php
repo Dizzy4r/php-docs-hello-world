@@ -48,7 +48,7 @@ table {
     $sql = "SELECT * FROM forumposts ORDER BY postid DESC"; // Trenger visst ikke `` tegnene 
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result); // Ikke nødvendig?
-echo "<table>";
+echo "<table id='teibel'>";
 $x = 0;
 while ($num = $result->fetch_assoc()) {
     if($x < 7) {
@@ -85,6 +85,7 @@ while ($row = $result->fetch()) {
 
 <div id="ipinfo">
 <br>
+    <button id="butt"></button>
 <?php
         if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
             $ipVPN = $_SERVER['HTTP_X_FORWARDED_FOR'];
@@ -92,6 +93,7 @@ while ($row = $result->fetch()) {
         }
 ?>
 </div>
-    
+
+<script src="lol.js"></script>
 </body>
 </html>
