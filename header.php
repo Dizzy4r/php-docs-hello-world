@@ -11,7 +11,13 @@
 <h1>tryingAgain.</h1>
 
 <nav>
-    <div id="welcome">Welcome</div>
+    <div id="welcome">Welcome 
+<?php 
+if(isset($_SESSION['name'])) {
+    echo $_SESSION['name'];
+}
+?>
+</div>
     <div id="create"><a href="post.php">Post</a></div>
     <div id="home"><a href="index.php">Home</a></div>
         <?php 
