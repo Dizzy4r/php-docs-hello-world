@@ -29,6 +29,3 @@ if(!isset($_SESSION['name'])) {
 }
 ?>
 </nav>
-    
-</body>
-</html>
