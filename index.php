@@ -4,16 +4,6 @@ include 'connect.php';
 include 'header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>tryingAgain</title>
-</head>
-<body>
-
 <style>
     table, th, td {
     margin-top: 10vh;
