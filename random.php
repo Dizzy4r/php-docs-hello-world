@@ -12,8 +12,9 @@ if(isset($_SESSION['name'])) {
   echo 'Endelig';
 }
 else {
-  'ikkje online';
+  echo 'ikkje online';
 }
+?>
 
 <h1> Dette er en h1 </h1>
 
