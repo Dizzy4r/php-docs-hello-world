@@ -4,6 +4,8 @@ if(isset($_SESSION['name'])) {
     header('Location: index.php');
     exit();
 }
+?>
+<?php
 include 'header.php';
 include 'connect.php';
 ?>
