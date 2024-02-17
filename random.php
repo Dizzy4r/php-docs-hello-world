@@ -48,7 +48,7 @@ else {
 </style>
 
 <div id="con">
-<p style="text-align: center;">Heihei</p>
+<p style="text-align: center;">Heihei <?php echo $_SESSION['name'];?></p>
 </div>
 
 </body>
