@@ -33,6 +33,12 @@ table {
 </style>
 
 <div id="cont" style="height:120vh;">
+<?php
+$sql = "DROP TABLE forumposts";
+if (mysqli_query($conn, $sql)) {
+    echo "Table members deleted successfully";
+}
+    ?>
     
 <?php
     $sql = "SELECT * FROM forumposts ORDER BY postid DESC"; // Trenger visst ikke `` tegnene 
