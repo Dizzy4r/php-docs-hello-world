@@ -10,13 +10,21 @@ include 'header.php';
     margin-left: 30vw;
     margin-top: 10vh;
     width: 40vw;
+    text-align: center;
     font-size: 16px;
 }
     
 </style>
 
-<div id="cont" style="height:120vh;">
-    
+<div id="ipinfo">
+<?php
+        if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ipVPN = $_SERVER['HTTP_X_FORWARDED_FOR'];
+            echo "Your ip is " . $ipVPN;
+        }
+?>
+</div>
+
 <?php
 /*
     $sql = "SELECT * FROM forumposts ORDER BY postid DESC"; // Trenger visst ikke `` tegnene 
@@ -40,18 +48,6 @@ while ($num = $result->fetch_assoc()) {
 echo "</table>";
 */
 ?>
-
-</div>
-
-
-<div id="ipinfo">
-<?php
-        if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $ipVPN = $_SERVER['HTTP_X_FORWARDED_FOR'];
-            echo "Your ip is " . $ipVPN;
-        }
-?>
-</div>
 
 <script src="lol.js"></script>
 </body>
