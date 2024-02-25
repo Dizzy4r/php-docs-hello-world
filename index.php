@@ -5,36 +5,20 @@ include 'header.php';
 ?>
 
 <style>
-    table, th, td {
+
+#ipinfo {
+    margin-left: 30vw;
     margin-top: 10vh;
-    border: solid 1px black;
+    width: 40vw;
     font-size: 16px;
 }
-td {
-    background: white;
-}
-th {
-    width: 80vw;
-    background: rgb(223, 249, 223);
-
-}
-table {
-    background: rgb(223, 249, 223);
-    margin-left: 10vw;
-    width: 80vw;
-    height: 50vh auto;
-}
-
-#form1 {    
-    width: 50vw;
-    margin-left: 25vw;
-    text-align: center;
-}
+    
 </style>
 
 <div id="cont" style="height:120vh;">
     
 <?php
+/*
     $sql = "SELECT * FROM forumposts ORDER BY postid DESC"; // Trenger visst ikke `` tegnene 
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result); // Ikke nødvendig?
@@ -54,28 +38,13 @@ while ($num = $result->fetch_assoc()) {
     "; 
 }
 echo "</table>";
-
+*/
 ?>
 
 </div>
 
-<?php
-/*
-$real = 'SELECT name FROM test';
-foreach ($connn->query($real) as $row) {
-    print $row['name'] . "\t";
-}
-
-$result = $connn->query('SELECT name FROM test');
-while ($row = $result->fetch()) {
-  print $row[0];
-}
-*/
-?>
 
 <div id="ipinfo">
-<br>
-    <button id="butt"></button>
 <?php
         if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
             $ipVPN = $_SERVER['HTTP_X_FORWARDED_FOR'];
