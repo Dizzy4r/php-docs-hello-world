@@ -52,7 +52,7 @@ if(!isset($_POST['username'], $_POST['password'])) {
     header('Location: login.php');
 }
 
-if($stmt = $conn->prepare('SELECT fld_id, fld_password FROM userr WHERE fld_name = ?')) {
+if($stmt = $conn->prepare('SELECT real_name, real_password FROM real_user WHERE real_name = ?')) {
             $name = htmlspecialchars($_POST['username']);
             $stmt->bind_param('s', $name);
             $stmt->execute();
