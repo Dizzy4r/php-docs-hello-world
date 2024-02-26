@@ -20,8 +20,7 @@ else {
     margin-left: 50vw;
     width: 0vw;
     height: 0vh;
-    background: blue;
-    opacity: 0.0;
+    background: linear-gradient(90deg, rgba(105,105,200,1) 0%, rgba(13,162,193,1) 100%);    opacity: 0.0;
   }
 
   @keyframes open {
@@ -47,7 +46,7 @@ else {
     margin-left: 50vw;
     width: 0vw;
     height: 0vh;
-    background: red;
+    background: linear-gradient(90deg, rgba(166,87,100,1) 0%, rgba(149,47,47,1) 100%);
     opacity: 0.0;
   }
   @keyframes openbottom {
