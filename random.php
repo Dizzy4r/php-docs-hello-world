@@ -37,7 +37,7 @@ else {
       width: 50vw;
       height: 40vh;
       opacity: 0.8;
-      transform: rotateZ(180deg);
+      transform: rotateZ(45deg);
     }
   }
 
@@ -56,9 +56,6 @@ else {
       margin-left: 50vw;
       width: 0vw;
       opacity: 0.0;
-      transform: rotateZ(0deg);
-    }
-    50% {
       transform: rotateZ(0deg);
     }
     to {
