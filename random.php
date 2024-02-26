@@ -21,6 +21,7 @@ else {
     width: 0vw;
     height: 0vh;
     background: blue;
+    opacity: 0.0;
   }
 
   @keyframes open {
@@ -34,7 +35,7 @@ else {
       margin-left: 25vw;
       width: 50vw;
       height: 40vh;
-      opacity: 0.6;
+      opacity: 0.8;
     }
   }
 
@@ -45,6 +46,7 @@ else {
     width: 0vw;
     height: 0vh;
     background: red;
+    opacity: 0.0;
   }
   @keyframes openbottom {
     from {
@@ -57,7 +59,7 @@ else {
       margin-left: 25vw;
       width: 50vw;
       height: 40vh;
-      opacity: 0.6;
+      opacity: 0.8;
     }
   }
   
