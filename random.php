@@ -15,7 +15,7 @@ else {
 
 <style>
   #container {
-    animation: open 1s 2s forwards;
+    animation: open 1s 1s forwards;
     text-align: center;
     margin-left: 50vw;
     width: 0vw;
@@ -42,7 +42,7 @@ else {
   }
 
   #bottomcontainer {
-    animation: openbottom 1s 2s forwards;
+    animation: openbottom 1s 1s forwards;
     text-align: center;
     margin-left: 50vw;
     width: 0vw;
