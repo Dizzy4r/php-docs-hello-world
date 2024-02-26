@@ -12,41 +12,37 @@ else {
   echo 'ikkje online';
 }
 ?>
-<style>
-#con {
-    width: 10vw;
-    height: 10vh;
-    background: pink;
-    margin-left: 45vw;
-    margin-top:10vh;
-    opacity: 0.0;
-    animation: 2s starteren cubic-bezier(0.215, 0.610, 0.355, 1) forwards 1s;
-}
 
-@keyframes starteren {
+<style>
+  #container {
+    animation: open 1s 2s forwards;
+    text-align: center;
+    margin-left: 50vw;
+    width: 0vw;
+    height: 0vh;
+    background: blue;
+  }
+
+  @keyframes open {
     from {
-    width: 10vw;
-    height: 10vh;
-    background: pink;
-    margin-left: 45vw;
-    margin-top:45vh;
-    opacity: 0.0;
+      height: 0vh;
+      margin-left: 50vw;
+      width: 0vw;
+      opacity: 0.0;
     }
     to {
-    width: 80vw;
-    opacity: 1.0;
-    height: 70vh;
-    background: rgb(255, 242, 218);
-    margin-left: 10vw;
-    margin-top:15vh;
-    box-shadow: 0px 0px 90px 70px rgb(165, 165, 165);
+      margin-left: 25vw;
+      width: 50vw;
+      height: 40vh;
+      opacity: 0.6;
     }
-}
+  }
 </style>
 
-<div id="con">
-<p style="text-align: center;">Heihei <?php echo $_SESSION['name'];?></p>
+<div id="container">
+  <div id=""></div>
 </div>
+
 
 </body>
 </html>
