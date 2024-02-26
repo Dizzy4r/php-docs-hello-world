@@ -30,14 +30,14 @@ else {
       margin-left: 50vw;
       width: 0vw;
       opacity: 0.0;
-      transform: rotateZ(0deg);
+      transform: skewX(0deg);
     }
     to {
       margin-left: 25vw;
       width: 50vw;
       height: 40vh;
       opacity: 0.8;
-      transform: rotateZ(45deg);
+      transform: skewX(360deg);
     }
   }
 
