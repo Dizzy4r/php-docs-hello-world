@@ -42,7 +42,7 @@ else {
   }
 
   #bottomcontainer {
-    animation: openbottom 3s 2s forwards;
+    animation: openbottom 1s 2s forwards;
     text-align: center;
     margin-left: 50vw;
     width: 0vw;
@@ -57,7 +57,9 @@ else {
       width: 0vw;
       opacity: 0.0;
       transform: rotateZ(0deg);
-
+    }
+    50% {
+      transform: rotateZ(0deg);
     }
     to {
       margin-left: 25vw;
@@ -65,7 +67,6 @@ else {
       height: 40vh;
       opacity: 0.8;
       transform: rotateZ(360deg);
-
     }
   }
   
