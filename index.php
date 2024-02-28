@@ -56,7 +56,7 @@ include 'header.php';
 
 <?php
 
-    $sql = "SELECT * FROM forumposts ORDER BY postid DESC"; // Trenger visst ikke `` tegnene 
+    $sql = "SELECT * FROM forumposts"; // Trenger visst ikke `` tegnene 
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result); // Ikke nødvendig?
 echo "<table id='teibel'>";
