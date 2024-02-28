@@ -57,7 +57,7 @@ include 'header.php';
 </div>
 
 <?php
-/*
+
     $sql = "SELECT * FROM forumposts ORDER BY postid DESC"; // Trenger visst ikke `` tegnene 
     $result = mysqli_query($conn, $sql);
     $num = mysqli_num_rows($result); // Ikke nødvendig?
@@ -72,12 +72,12 @@ while ($num = $result->fetch_assoc()) {
     }
     echo " <tr>
     <td style='width:13vw'>" . $num['postname'] . "</td>
-    <td>" . $num['posttext'] . "<br> <br><p> Post-id: " . $num['postid'] .  ". Category: " . $num['postcat'] . "</p></td>
+    <td>" . $num['posttext'] . "<br> <br><p> Post-id: " .  ". Category: " . $num['postcat'] . "</p></td>
     </tr> 
     "; 
 }
 echo "</table>";
-*/
+
 ?>
 
 <script src="lol.js"></script>
