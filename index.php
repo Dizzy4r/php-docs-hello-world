@@ -45,7 +45,6 @@ include 'header.php';
 }
     
 </style>
-<div id="con">
 <div id="ipinfo">
 <?php
         if(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
@@ -53,7 +52,6 @@ include 'header.php';
             echo "Your ip is " . $ipVPN;
         }
 ?>
-</div>
 </div>
 
 <?php
