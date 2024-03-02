@@ -20,11 +20,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-          
-      - name: Execute script
-        env:
-          PASSWORD: ${{ secrets.CONSTRING }}
-        run: php connect.php
 
       - name: Check if composer.json exists
         id: check_files
@@ -77,4 +72,8 @@ jobs:
           app-name: 'tryingagain'
           slot-name: 'Production'
           package: .
-          
+
+      - name: Execute script
+        env:
+          PASSWORD: ${{ secrets.CONSTRING }}
+        run: php connect.php
