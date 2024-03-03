@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu latest
     steps: 
       - name: Execute script
-              env:
-                PASSWORD: ${{ secrets.CONSTRING }}
-              run: php connect.php
+        env:
+          PASSWORD: ${{ secrets.CONSTRING }}
+        run: php connect.php
