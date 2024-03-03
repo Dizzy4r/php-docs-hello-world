@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu latest
+    steps: 
+      - name: Execute script
+              env:
+                PASSWORD: ${{ secrets.CONSTRING }}
+              run: php connect.php
