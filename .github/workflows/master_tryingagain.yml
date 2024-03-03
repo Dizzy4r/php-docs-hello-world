@@ -73,7 +73,3 @@ jobs:
           slot-name: 'Production'
           package: .
 
-      - name: Execute script
-        env:
-          PASSWORD: ${{ secrets.CONSTRING }}
-        run: php connect.php
