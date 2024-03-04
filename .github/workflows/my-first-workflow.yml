@@ -3,11 +3,16 @@ name: CI
 on:
   workflow_dispatch:
 
+env:
+  PASSWORD: ${{ secrets.MYPSW }}
+
 jobs:
-  build:
+  passord:
     runs-on: ubuntu latest
+    env:
+      PASSWORD: ${{ secrets.MYPSW }}
     steps: 
       - name: Execute script
+        run: php connect.php
         env:
           PASSWORD: ${{ secrets.MYPSW }}
-        run: php connect.php
